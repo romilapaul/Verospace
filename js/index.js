@@ -5,6 +5,35 @@ $(document).ready(function () {
   });
 });
 
+// for rent dropdown
+
+document.querySelectorAll(".custom-dropdown").forEach((dropdown) => {
+  const toggle = dropdown.querySelector(".dropdown-toggle");
+  const menu = dropdown.querySelector(".dropdown-menu");
+
+  toggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    const isOpen = menu.style.display === "block";
+    document
+      .querySelectorAll(".dropdown-menu")
+      .forEach((m) => (m.style.display = "none"));
+    menu.style.display = isOpen ? "none" : "block";
+  });
+
+  menu.querySelectorAll("li").forEach((item) => {
+    item.addEventListener("click", () => {
+      toggle.querySelector("p").textContent = item.textContent;
+      menu.style.display = "none";
+    });
+  });
+});
+
+document.addEventListener("click", function () {
+  document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+    menu.style.display = "none";
+  });
+});
+
 // for countdown
 
 document.addEventListener("DOMContentLoaded", () => {
