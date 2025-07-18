@@ -10,6 +10,8 @@
       href="./assets/verospace-favicon.png"
       type="image/x-icon"
     />
+    <!-- AOS link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header Section -->
@@ -172,7 +174,7 @@
         <h2 class="subheading">How To Sell Or Rent Your Property</h2>
         <div class="timeline">
           <div class="timeline-step">
-            <div class="card">
+            <div class="card" data-aos="zoom-in">
               <div class="icon">
                 <img src="./assets/howitwork-img1.png" alt="" />
               </div>
@@ -184,7 +186,7 @@
 
           <div class="timeline-step center-step">
             <div class="circle2 circle">2</div>
-            <div class="card">
+            <div class="card" data-aos="zoom-in">
               <div class="icon">
                 <img src="./assets/howitwork-img2.png" alt="" />
               </div>
@@ -194,7 +196,7 @@
           </div>
 
           <div class="timeline-step">
-            <div class="card">
+            <div class="card" data-aos="zoom-in">
               <div class="icon">
                 <img src="./assets/howitwork-img3.png" alt="" />
               </div>
@@ -343,5 +345,10 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="./js/contact.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

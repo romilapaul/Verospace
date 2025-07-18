@@ -23,6 +23,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- AOS Link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header Section -->
@@ -276,7 +278,11 @@
             <div class="properties-section-cards swiper properties-swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="properties-section-card">
+                  <div
+                    class="properties-section-card"
+                    data-aos="flip-left"
+                    data-aos-duration="1500"
+                  >
                     <div class="property-section-card-img">
                       <img src="./assets/listed-properties1.png" alt="" />
                     </div>
@@ -303,7 +309,11 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="properties-section-card">
+                  <div
+                    class="properties-section-card"
+                    data-aos="flip-right"
+                    data-aos-duration="1500"
+                  >
                     <div class="property-section-card-img">
                       <img src="./assets/listed-properties2.png" alt="" />
                     </div>
@@ -330,7 +340,11 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="properties-section-card">
+                  <div
+                    class="properties-section-card"
+                    data-aos="flip-left"
+                    data-aos-duration="1500"
+                  >
                     <div class="property-section-card-img">
                       <img src="./assets/listed-properties3.png" alt="" />
                     </div>
@@ -357,7 +371,11 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="properties-section-card">
+                  <div
+                    class="properties-section-card"
+                    data-aos="flip-right"
+                    data-aos-duration="1500"
+                  >
                     <div class="property-section-card-img">
                       <img src="./assets/listed-properties4.png" alt="" />
                     </div>
@@ -384,7 +402,11 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="properties-section-card">
+                  <div
+                    class="properties-section-card"
+                    data-aos="flip-left"
+                    data-aos-duration="1500"
+                  >
                     <div class="property-section-card-img">
                       <img src="./assets/listed-properties1.png" alt="" />
                     </div>
@@ -526,5 +548,10 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="./js/propertydetails.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

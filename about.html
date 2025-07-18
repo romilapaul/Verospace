@@ -14,6 +14,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- AOS link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header Section -->
@@ -79,14 +81,26 @@
         <div class="row">
           <div class="col-1">
             <div class="tabscreen-img">
-              <div class="main-img">
+              <div
+                class="main-img"
+                data-aos="flip-left"
+                data-aos-duration="1000"
+              >
                 <img src="./assets/who-we are-img1.png" alt="" />
               </div>
-              <div class="scnd-img">
+              <div
+                class="scnd-img"
+                data-aos="flip-right"
+                data-aos-duration="1000"
+              >
                 <img src="./assets/who-we are-img2.png" alt="" />
               </div>
             </div>
-            <div class="who-we-are-img">
+            <div
+              class="who-we-are-img"
+              data-aos="fade-up-right"
+              data-aos-duration="1500"
+            >
               <img src="./assets/who-we are-img1.png" alt="" />
               <div class="small-who-we-are-img">
                 <img src="./assets/who-we are-img2.png" alt="" />
@@ -170,7 +184,11 @@
       <div class="container">
         <div class="row">
           <div class="col-1">
-            <div class="commitment-img">
+            <div
+              class="commitment-img"
+              data-aos="fade-up-left"
+              data-aos-duration="1500"
+            >
               <img src="./assets/Our-commitment-img.png" alt="" />
             </div>
           </div>
@@ -212,7 +230,11 @@
         <h2 class="subheading">Meet Our Real Estate Team</h2>
         <div class="row">
           <div class="col-7">
-            <div class="team-card1 team-card">
+            <div
+              class="team-card1 team-card"
+              data-aos="flip-left"
+              data-aos-duration="1500"
+            >
               <div class="details">
                 <div class="detail">
                   <p class="name">Michel Smith</p>
@@ -225,7 +247,11 @@
             </div>
           </div>
           <div class="col-7">
-            <div class="team-card2 team-card">
+            <div
+              class="team-card2 team-card"
+              data-aos="flip-right"
+              data-aos-duration="1500"
+            >
               <div class="details">
                 <div class="detail">
                   <p class="name">Lissa Mormont</p>
@@ -238,7 +264,11 @@
             </div>
           </div>
           <div class="col-7">
-            <div class="team-card3 team-card">
+            <div
+              class="team-card3 team-card"
+              data-aos="flip-left"
+              data-aos-duration="1500"
+            >
               <div class="details">
                 <div class="detail">
                   <p class="name">Tony Hemsworth</p>
@@ -251,7 +281,11 @@
             </div>
           </div>
           <div class="col-7">
-            <div class="team-card4 team-card">
+            <div
+              class="team-card4 team-card"
+              data-aos="flip-right"
+              data-aos-duration="1500"
+            >
               <div class="details">
                 <div class="detail">
                   <p class="name">Jack Rozer</p>
@@ -506,5 +540,10 @@
     </script>
 
     <script src="./js/index.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
