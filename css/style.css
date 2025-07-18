@@ -1730,6 +1730,10 @@ footer > div > div {
     border-radius: 25px;
   }
 
+  .custom-dropdown{
+    margin-bottom: 0px;
+  }
+
   .price,
   .range-container {
     display: none;
