@@ -104,15 +104,6 @@ setupSlider(
 document.addEventListener("DOMContentLoaded", function () {
   const toggleBtn = document.getElementById("toggleFilterBtn");
   const sidebar = document.querySelector(".sidebar-wrapper");
-
-  toggleBtn.addEventListener("click", function () {
-    sidebar.classList.toggle("active");
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleBtn = document.getElementById("toggleFilterBtn");
-  const sidebar = document.querySelector(".sidebar-wrapper");
   const closeBtn = document.getElementById("closeFilterBtn");
 
   // Toggle sidebar on mobile
@@ -120,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
     sidebar?.classList.toggle("active");
   });
 
-  // Close sidebar when close button is clicked
+  // Close sidebar
   closeBtn?.addEventListener("click", function () {
     sidebar?.classList.remove("active");
   });
