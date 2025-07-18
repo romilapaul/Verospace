@@ -692,6 +692,22 @@ footer > div > div {
     background-color: black;
   }
 
+  .ham span {
+    transition: all 0.3s ease;
+  }
+
+  .ham.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .ham.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .ham.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
   /* newletter section */
   .col-6 {
     width: 100% !important;
