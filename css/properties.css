@@ -194,6 +194,74 @@ nav,
   margin-bottom: 0px !important;
 }
 
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f5f5; /* light gray */
+  padding: 8px 14px;
+  border-radius: 999px; /* pill shape */
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.dropdown-toggle .properties {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-toggle .properties img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.dropdown-toggle .arrow img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0 0;
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu li:hover {
+  background-color: #eee;
+}
+
 .sm-screen-banner-div {
   display: none;
 }
@@ -437,9 +505,9 @@ hr {
   display: block;
 }
 
-.form-label-city{
-   display: block;
-   margin-bottom: 20px;
+.form-label-city {
+  display: block;
+  margin-bottom: 20px;
 }
 
 .filter-section {
@@ -1122,6 +1190,10 @@ footer > div > div {
     font-size: 16px;
   }
 
+  .custom-dropdown{
+    margin-bottom: 0px
+  }
+
   /* newletter section */
   .col-6 {
     width: 100% !important;
@@ -1406,6 +1478,10 @@ footer > div > div {
 
   #email {
     max-width: 300px;
+  }
+
+  .custom-dropdown {
+    width: 125px;
   }
 
   /* newsletter section */
