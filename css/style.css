@@ -436,18 +436,20 @@ input[type="range"]::-moz-range-thumb {
 
 .hero-section {
   position: relative;
-  margin-bottom: 75px;
-}
-
-.hero-section > div {
-  max-width: 1570px;
-  margin-top: 10px;
+  margin: 10px 1.875vw 75px;
   background: url(../assets/aboutus-banner-section.png) center/cover no-repeat;
   min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
+}
+
+.hero-section > div {
+  max-width: 1570px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-content {
@@ -477,8 +479,9 @@ input[type="range"]::-moz-range-thumb {
   object-fit: contain;
 }
 
-.hero-description > p {
+.hero-description > a {
   font-size: 18px;
+  color: white;
 }
 
 /* Apartment types section */
@@ -1844,7 +1847,7 @@ footer > div > div {
   .tabscreen-img {
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
   }
 
   .main-img {
@@ -1852,15 +1855,6 @@ footer > div > div {
   }
 
   .main-img > img {
-    width: 100%;
-    object-fit: contain;
-  }
-
-  .scnd-img {
-    max-width: 262px;
-  }
-
-  .scnd-img > img {
     width: 100%;
     object-fit: contain;
   }
@@ -2087,7 +2081,7 @@ footer > div > div {
 
   /* Hero section */
 
-  .hero-description > p {
+  .hero-description > a {
     font-size: 12px;
   }
 
