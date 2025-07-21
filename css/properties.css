@@ -147,18 +147,20 @@ nav,
 
 .hero-section {
   position: relative;
-  margin-bottom: 170px;
-}
-
-.hero-section > div {
-  max-width: 1570px;
-  margin-top: 10px;
+  margin: 10px 1.875vw 160px;
   background: url(../assets/aboutus-banner-section.png) center/cover no-repeat;
   min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
+}
+
+.hero-section > div {
+  max-width: 1570px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-content {
@@ -189,8 +191,9 @@ nav,
   object-fit: contain;
 }
 
-.hero-description > p {
+.hero-description > a {
   font-size: 18px;
+  color: white;
   margin-bottom: 0px !important;
 }
 
@@ -960,6 +963,21 @@ footer > div > div {
 @media screen and (max-width: 1200px) {
   /* properties section */
 
+  #closeFilterBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: transparent;
+    color: black;
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgb(255, 152, 152);
+    cursor: pointer;
+  }
+
   .mobile-filter-icon {
     display: block;
     background-color: #e9ecf3;
@@ -1229,8 +1247,8 @@ footer > div > div {
 
   header {
     padding: 10px 15px;
-    left: 10px;
-    right: 10px;
+    left: 20px;
+    right: 20px;
     border-radius: 30px;
   }
 
@@ -1447,6 +1465,10 @@ footer > div > div {
     width: 100%;
   }
 
+  .property-card-content::before {
+    display: none;
+  }
+
   .property-card1 {
     flex-direction: column;
   }
@@ -1472,7 +1494,7 @@ footer > div > div {
 
   /* Hero section */
 
-  .hero-description > p {
+  .hero-description > a {
     font-size: 12px;
   }
 
