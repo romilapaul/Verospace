@@ -180,18 +180,20 @@ nav,
 
 .hero-section {
   position: relative;
-  margin-bottom: 75px;
-}
-
-.hero-section > div {
-  max-width: 1570px;
-  margin-top: 10px;
+  margin: 10px 1.875vw 75px;
   background: url(../assets/aboutus-banner-section.png) center/cover no-repeat;
   min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
+}
+
+.hero-section > div {
+  max-width: 1570px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-content {
@@ -221,9 +223,10 @@ nav,
   object-fit: contain;
 }
 
-.hero-description > p {
+.hero-description > a {
   font-size: 18px;
   margin-bottom: 0 !important;
+  color: white;
 }
 
 /* get in touch section */
@@ -743,8 +746,8 @@ footer > div > div {
 
   header {
     padding: 10px 15px;
-    left: 10px;
-    right: 10px;
+    left: 20px;
+    right: 20px;
     border-radius: 30px;
   }
 
@@ -861,7 +864,7 @@ footer > div > div {
 
   /* Hero section */
 
-  .hero-description > p {
+  .hero-description > a {
     font-size: 12px;
   }
 
