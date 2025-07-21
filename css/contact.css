@@ -581,8 +581,28 @@ footer > div > div {
 
   /* footer section */
   footer > div > div {
-    justify-content: start;
+    justify-content: center;
     gap: 50px;
+  }
+
+  .footer-logo {
+    margin: 0 auto;
+  }
+
+  .footer-div-1 > p {
+    text-align: center;
+  }
+
+  .social-media-icon {
+    justify-content: center;
+  }
+
+  .footer-div-2 > ul > li {
+    text-align: center;
+  }
+
+  .footer-heading {
+    text-align: center;
   }
 
   .footer-divider {

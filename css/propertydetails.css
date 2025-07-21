@@ -814,7 +814,7 @@ footer > div > div {
 
   .col-8 {
     width: 100% !important;
-     margin-top: 50px;
+    margin-top: 50px;
   }
 
   .col-9 {
@@ -836,8 +836,28 @@ footer > div > div {
 
   /* footer section */
   footer > div > div {
-    justify-content: start;
+    justify-content: center;
     gap: 50px;
+  }
+
+  .footer-logo {
+    margin: 0 auto;
+  }
+
+  .footer-div-1 > p {
+    text-align: center;
+  }
+
+  .social-media-icon {
+    justify-content: center;
+  }
+
+  .footer-div-2 > ul > li {
+    text-align: center;
+  }
+
+  .footer-heading {
+    text-align: center;
   }
 
   .footer-divider {
@@ -1154,7 +1174,7 @@ footer > div > div {
   }
 
   /* get in touch section */
-   .subheading {
+  .subheading {
     font-size: 20px;
   }
 
@@ -1204,7 +1224,7 @@ footer > div > div {
     font-size: 8px;
   }
 
-  .other-services-btn>a{
+  .other-services-btn > a {
     font-size: 12px;
   }
 
@@ -1273,7 +1293,7 @@ footer > div > div {
 
   .get-in-touch-section {
     margin-bottom: 25px;
-}
+  }
 
   .form-container {
     padding: 25px 20px;
