@@ -1317,6 +1317,15 @@ footer > div > div {
     align-items: center;
   }
 
+  .property-images1,
+  .property-images2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
   .footer-div-1 > p {
     font-size: 12px;
   }
