@@ -152,18 +152,20 @@ nav,
 
 .banner-section {
   position: relative;
-  margin-bottom: 160px;
-}
-
-.banner-section > div {
-  max-width: 1570px;
-  margin-top: 10px;
+  margin: 10px 1.875vw 160px;
   background: url(../assets/banner-image.png) center/cover no-repeat;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
+}
+
+.banner-section > div {
+  max-width: 1570px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner-content {
