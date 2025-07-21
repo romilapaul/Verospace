@@ -48,7 +48,32 @@
             </ul>
             <div class="nav-btn">
               <a class="contact-us" href="./contact.html">Contact us</a>
-              <a class="login" href="./login.html">LOGIN</a>
+              <a id="openModal" class="login">LOGIN</a>
+              <div class="modal-overlay" id="modalOverlay">
+                <div class="modal">
+                  <div class="login-container">
+                    <h2>User Login</h2>
+                    <p class="login-subtitle">
+                      Hey, enter your detail to get login<br />to your account
+                    </p>
+
+                    <form>
+                      <input type="text" placeholder="username" required />
+                      <input type="password" placeholder="password" required />
+                      <div class="forgot-password">
+                        <a href="#">Forgot password?</a>
+                      </div>
+                      <button type="submit">Login</button>
+                    </form>
+
+                    <p class="create-account">
+                      You don’t have an account?
+                      <a href="#">Create an account</a>
+                    </p>
+                    <button id="closeModal">Close</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </nav>
