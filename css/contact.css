@@ -194,7 +194,7 @@ nav,
   display: flex;
 }
 
-.modal {
+.custom-modal {
   background: #f7f8fa;
   border-radius: 20px;
   padding: 40px 30px;
@@ -259,7 +259,7 @@ input[type="password"] {
   margin-top: 10px;
 }
 
-button {
+.custom-modal button {
   width: 50%;
   background-color: #543ad7;
   color: white;
@@ -921,7 +921,7 @@ footer > div > div {
 
 @media screen and (max-width: 576px) {
   /* header section */
-  .modal {
+  .custom-modal {
     padding: 30px 20px;
   }
 
@@ -939,7 +939,7 @@ footer > div > div {
     padding: 12px 16px;
   }
 
-  button {
+  .custom-modal button {
     font-size: 14px;
     padding: 12px 0;
     width: 50%;

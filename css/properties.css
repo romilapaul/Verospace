@@ -226,7 +226,7 @@ input[type="password"] {
   margin-top: 10px;
 }
 
-button {
+.login-container button {
   width: 50%;
   background-color: #543ad7;
   color: white;
@@ -1075,8 +1075,8 @@ footer > div > div {
 
   #closeFilterBtn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 40px;
     z-index: 1000;
     background-color: transparent;
     color: black;
@@ -1086,6 +1086,7 @@ footer > div > div {
     border-radius: 50%;
     background-color: rgb(255, 152, 152);
     cursor: pointer;
+    width: 40px;
   }
 
   .mobile-filter-icon {
@@ -1571,7 +1572,7 @@ footer > div > div {
     padding: 12px 16px;
   }
 
-  button {
+  .login-container button {
     font-size: 14px;
     padding: 12px 0;
     width: 50%;

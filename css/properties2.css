@@ -414,6 +414,7 @@ select {
   cursor: pointer;
   float: right;
   font-size: 14px;
+  width: 200px;
 }
 
 .divider {

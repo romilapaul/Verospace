@@ -7,30 +7,26 @@ $(document).ready(function () {
 
 // for login
 
-const openBtn = document.getElementById("openModal");
-const closeBtn = document.getElementById("closeModal");
-const modalOverlay = document.getElementById("modalOverlay");
+  const openBtn = document.getElementById("openModal");
+  const closeBtn = document.getElementById("closeModal");
+  const modalOverlay = document.getElementById("modalOverlay");
 
-openBtn.addEventListener("click", () => {
-  const navRight = document.querySelector(".nav-right");
-  const hamIcon = document.querySelector(".ham");
-  modalOverlay.classList.add("active");
-  document.body.classList.add("no-scroll");
-});
+  openBtn.addEventListener("click", () => {
+    modalOverlay.classList.add("active");
+    document.body.classList.add("no-scroll");
+  });
 
-// Close when ✕ button is clicked
-closeBtn.addEventListener("click", () => {
-  modalOverlay.classList.remove("active");
-  document.body.classList.remove("no-scroll");
-});
-
-// Optional: close modal when clicking outside the modal content
-modalOverlay.addEventListener("click", (event) => {
-  if (event.target === modalOverlay) {
+  closeBtn.addEventListener("click", () => {
     modalOverlay.classList.remove("active");
     document.body.classList.remove("no-scroll");
-  }
-});
+  });
+
+  modalOverlay.addEventListener("click", (event) => {
+    if (event.target === modalOverlay) {
+      modalOverlay.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    }
+  });
 
 // for rent dropdown
 
