@@ -2283,6 +2283,10 @@ footer > div > div {
 
   /* who we are section */
 
+  .col-2 {
+    margin-top: 50px;
+  }
+
   .who-we-are-img {
     max-width: 300px;
     position: relative;
