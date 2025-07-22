@@ -57,7 +57,7 @@
             </ul>
             <div class="nav-btn">
               <a class="contact-us" href="./contact.html">Contact us</a>
-             <a id="openModal" class="login">LOGIN</a>
+              <a id="openModal" class="login">LOGIN</a>
               <div class="modal-overlay" id="modalOverlay">
                 <div class="modal">
                   <div class="login-container">
@@ -77,7 +77,7 @@
 
                     <p class="create-account">
                       You don’t have an account?
-                      <a href="#">Create an account</a>
+                      <a href="./registration.html">Create an account</a>
                     </p>
                     <button id="closeModal">Close</button>
                   </div>
@@ -92,141 +92,143 @@
     <!-- Banner Section -->
 
     <section class="banner-section">
-      <div class="container">
-        <div class="row">
-          <div class="banner-content">
-            <h1 data-aos="fade-up" data-aos-duration="1000">
-              Perfect Platform For Buying Or Renting
-              <span> Houses, Flats, And Villas</span>
-            </h1>
-            <p>Search thousands of homes. Find the one that fits you.</p>
-          </div>
-        </div>
-        <div class="sm-banner-div">
-          <div class="sm-banner-div1">
-            <div class="custom-dropdown">
-              <div class="dropdown-toggle" id="rentDropdownToggle">
-                <div class="properties">
-                  <div class="sm-banner-div-img">
-                    <img src="./assets/rent.png" alt="Rent" />
-                  </div>
-                  <p>Rent</p>
-                </div>
-                <div class="arrow">
-                  <img src="./assets/arrow-down.png" alt="Arrow" />
-                </div>
-              </div>
-
-              <ul class="dropdown-menu" id="rentDropdownMenu">
-                <li>Rent</li>
-                <li>Buy</li>
-                <li>Lease</li>
-              </ul>
-            </div>
-
-            <!-- USD Dropdown -->
-            <div class="custom-dropdown">
-              <div class="dropdown-toggle" id="currencyDropdownToggle">
-                <div class="properties">
-                  <div class="sm-banner-div-img">
-                    <img src="./assets/usd.png" alt="USD" />
-                  </div>
-                  <p>USD</p>
-                </div>
-                <div class="arrow">
-                  <img src="./assets/arrow-down.png" alt="Arrow" />
-                </div>
-              </div>
-
-              <ul class="dropdown-menu" id="currencyDropdownMenu">
-                <li>USD</li>
-                <li>EUR</li>
-                <li>INR</li>
-                <li>GBP</li>
-              </ul>
+      <div class="banner-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="banner-content">
+              <h1 data-aos="fade-up" data-aos-duration="1000">
+                Perfect Platform For Buying Or Renting
+                <span> Houses, Flats, And Villas</span>
+              </h1>
+              <p>Search thousands of homes. Find the one that fits you.</p>
             </div>
           </div>
-          <div class="sm-banner-div2">
-            <input
-              type="text"
-              name="location"
-              id="location"
-              placeholder="Your desiered location goes here"
-            />
+          <div class="sm-banner-div">
+            <div class="sm-banner-div1">
+              <div class="custom-dropdown">
+                <div class="dropdown-toggle" id="rentDropdownToggle">
+                  <div class="properties">
+                    <div class="sm-banner-div-img">
+                      <img src="./assets/rent.png" alt="Rent" />
+                    </div>
+                    <p>Rent</p>
+                  </div>
+                  <div class="arrow">
+                    <img src="./assets/arrow-down.png" alt="Arrow" />
+                  </div>
+                </div>
 
-            <p class="price">Price Range</p>
-
-            <div class="range-container">
-              <div class="slider">
-                <div class="progress"></div>
+                <ul class="dropdown-menu" id="rentDropdownMenu">
+                  <li>Rent</li>
+                  <li>Buy</li>
+                  <li>Lease</li>
+                </ul>
               </div>
+
+              <!-- USD Dropdown -->
+              <div class="custom-dropdown">
+                <div class="dropdown-toggle" id="currencyDropdownToggle">
+                  <div class="properties">
+                    <div class="sm-banner-div-img">
+                      <img src="./assets/usd.png" alt="USD" />
+                    </div>
+                    <p>USD</p>
+                  </div>
+                  <div class="arrow">
+                    <img src="./assets/arrow-down.png" alt="Arrow" />
+                  </div>
+                </div>
+
+                <ul class="dropdown-menu" id="currencyDropdownMenu">
+                  <li>USD</li>
+                  <li>EUR</li>
+                  <li>INR</li>
+                  <li>GBP</li>
+                </ul>
+              </div>
+            </div>
+            <div class="sm-banner-div2">
               <input
-                type="range"
-                id="min-range"
-                min="0"
-                max="20000"
-                value="5000"
-                step="1"
+                type="text"
+                name="location"
+                id="location"
+                placeholder="Your desiered location goes here"
               />
-              <input
-                type="range"
-                id="max-range"
-                min="0"
-                max="20000"
-                value="15000"
-                step="1"
-              />
-              <div class="price-bubble" id="min-bubble">$5,000</div>
-              <div class="price-bubble" id="max-bubble">$15,000</div>
+
+              <p class="price">Price Range</p>
+
+              <div class="range-container">
+                <div class="slider">
+                  <div class="progress"></div>
+                </div>
+                <input
+                  type="range"
+                  id="min-range"
+                  min="0"
+                  max="20000"
+                  value="5000"
+                  step="1"
+                />
+                <input
+                  type="range"
+                  id="max-range"
+                  min="0"
+                  max="20000"
+                  value="15000"
+                  step="1"
+                />
+                <div class="price-bubble" id="min-bubble">$5,000</div>
+                <div class="price-bubble" id="max-bubble">$15,000</div>
+              </div>
             </div>
-          </div>
-          <div class="sm-banner-div3">
-            <div class="custom-dropdown">
-              <div class="dropdown-toggle" id="rentDropdownToggle">
-                <div class="properties">
-                  <div class="sm-banner-div-img">
-                    <img src="./assets/house.png" alt="Rent" />
+            <div class="sm-banner-div3">
+              <div class="custom-dropdown">
+                <div class="dropdown-toggle" id="rentDropdownToggle">
+                  <div class="properties">
+                    <div class="sm-banner-div-img">
+                      <img src="./assets/house.png" alt="Rent" />
+                    </div>
+                    <p>House</p>
                   </div>
-                  <p>House</p>
+                  <div class="arrow">
+                    <img src="./assets/arrow-down.png" alt="Arrow" />
+                  </div>
                 </div>
-                <div class="arrow">
-                  <img src="./assets/arrow-down.png" alt="Arrow" />
-                </div>
+
+                <ul class="dropdown-menu" id="rentDropdownMenu">
+                  <li>House</li>
+                  <li>Apartment</li>
+                  <li>Villa</li>
+                  <li>Studio</li>
+                </ul>
               </div>
 
-              <ul class="dropdown-menu" id="rentDropdownMenu">
-                <li>House</li>
-                <li>Apartment</li>
-                <li>Villa</li>
-                <li>Studio</li>
-              </ul>
-            </div>
-
-            <div class="custom-dropdown">
-              <div class="dropdown-toggle" id="rentDropdownToggle">
-                <div class="properties">
-                  <div class="sm-banner-div-img">
-                    <img src="./assets/rooms.png" alt="Rent" />
+              <div class="custom-dropdown">
+                <div class="dropdown-toggle" id="rentDropdownToggle">
+                  <div class="properties">
+                    <div class="sm-banner-div-img">
+                      <img src="./assets/rooms.png" alt="Rent" />
+                    </div>
+                    <p>Room</p>
                   </div>
-                  <p>Room</p>
+                  <div class="arrow">
+                    <img src="./assets/arrow-down.png" alt="Arrow" />
+                  </div>
                 </div>
-                <div class="arrow">
-                  <img src="./assets/arrow-down.png" alt="Arrow" />
-                </div>
-              </div>
 
-              <ul class="dropdown-menu" id="rentDropdownMenu">
-                <li>1 Room</li>
-                <li>2 Rooms</li>
-                <li>3 Rooms</li>
-                <li>4+ Rooms</li>
-              </ul>
+                <ul class="dropdown-menu" id="rentDropdownMenu">
+                  <li>1 Room</li>
+                  <li>2 Rooms</li>
+                  <li>3 Rooms</li>
+                  <li>4+ Rooms</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <span class="divider"></span>
-          <div class="sm-banner-div4">
-            <div class="search-btn">
-              <a href="#"><span>S</span>earch</a>
+            <span class="divider"></span>
+            <div class="sm-banner-div4">
+              <div class="search-btn">
+                <a href="#"><span>S</span>earch</a>
+              </div>
             </div>
           </div>
         </div>
@@ -730,7 +732,10 @@
               data-aos="fade-up-left"
               data-aos-duration="1500"
             >
-              <img src="./assets/other-services-img.png" alt="" />
+              <img src="./assets/other-services-img (2).png" alt="" />
+              <div class="other-services-small-img">
+                <img src="./assets/other-services-small-img.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
