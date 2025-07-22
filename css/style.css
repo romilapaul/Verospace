@@ -600,8 +600,9 @@ input[type="range"]::-moz-range-thumb {
   object-fit: contain;
 }
 
-.hero-description > p {
+.hero-description > a {
   font-size: 18px;
+  color: white;
 }
 
 /* Apartment types section */
@@ -1590,7 +1591,7 @@ footer > div > div {
 
   .col-2 {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 90px;
   }
 
   .subtitle {
@@ -2009,7 +2010,46 @@ footer > div > div {
   }
 
   .who-we-are-img {
-    display: none;
+    /* max-height: 523px; */
+    max-width: 350px;
+    position: relative;
+  }
+
+  .who-we-are-img > img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .small-who-we-are-img {
+    position: absolute;
+    bottom: -40px;
+    right: -90px;
+    max-width: 230px;
+    z-index: 2;
+  }
+
+  .small-who-we-are-img > img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .blue-box {
+    width: 160px;
+    height: 107px;
+    background-color: var(--primary-bg-color);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 155px;
+    right: -45px;
+    z-index: 3;
+  }
+
+  .blue-box-heading {
+    font-size: 28px;
   }
 
   /* other services section */
@@ -2241,6 +2281,32 @@ footer > div > div {
     z-index: 2;
   }
 
+  /* who we are section */
+
+  .who-we-are-img {
+    max-width: 300px;
+    position: relative;
+  }
+
+  .small-who-we-are-img {
+    position: absolute;
+    bottom: -35px;
+    right: -65px;
+    max-width: 180px;
+    z-index: 2;
+  }
+
+  .blue-box {
+    width: 160px;
+    height: 107px;
+    top: 135px;
+    right: -45px;
+  }
+
+  .blue-box-heading {
+    font-size: 28px;
+  }
+
   /* testimonial section */
 
   .testimonials-image {
@@ -2299,7 +2365,7 @@ footer > div > div {
 
   /* Hero section */
 
-  .hero-description > p {
+  .hero-description > a {
     font-size: 12px;
   }
 
@@ -2364,6 +2430,32 @@ footer > div > div {
 
   .experience-description {
     font-size: 12px;
+  }
+
+  /* who we are section */
+
+  .who-we-are-img {
+    max-width: 245px;
+    position: relative;
+  }
+
+  .small-who-we-are-img {
+    position: absolute;
+    bottom: -22px;
+    right: -36px;
+    max-width: 140px;
+    z-index: 2;
+  }
+
+  .blue-box {
+    width: 140px;
+    height: 80px;
+    top: 90px;
+    right: -33px;
+  }
+
+  .blue-box-heading {
+    font-size: 20px;
   }
 
   /* team section */
