@@ -15,14 +15,6 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./css/propertydetails.css" />
-    <!-- font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <!-- AOS Link -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
@@ -66,9 +58,23 @@
                       Hey, enter your detail to get login<br />to your account
                     </p>
 
-                    <form>
-                      <input type="text" placeholder="username" required />
-                      <input type="password" placeholder="password" required />
+                    <form action="/">
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="username"
+                        aria-label="Username" 
+                        required
+                      />
+                      <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="password"
+                        aria-label="password" 
+                        required
+                      />
                       <div class="forgot-password">
                         <a href="#">Forgot password?</a>
                       </div>
@@ -79,7 +85,7 @@
                       You don’t have an account?
                       <a href="#">Create an account</a>
                     </p>
-                    <button id="closeModal">Close</button>
+                    <button type="button" id="closeModal">Close</button>
                   </div>
                 </div>
               </div>
@@ -92,8 +98,8 @@
     <!--Hero section -->
 
     <section class="hero-section">
-      <div class="container">
-        <div class="row">
+      <div class="hero-wrapper">
+        <div class="container">
           <div class="hero-content">
             <h1><span class="letter">P</span>roperties</h1>
             <div class="hero-description">
@@ -186,7 +192,22 @@
           </div>
           <div class="col-12">
             <div class="sobha-villa-img">
-              <img src="./assets/sobha-villa-img.png" alt="" />
+              <div class="sobha-villa-img1" data-aos="flip-left">
+                <img
+                  src="./assets/sobha-villa-img1.png"
+                  alt="sobha-villa-img"
+                />
+                <img
+                  src="./assets/sobha-villa-img2.png"
+                  alt="sobha-villa-img2"
+                />
+              </div>
+              <div class="sobha-villa-img2" data-aos="flip-right">
+                <img
+                  src="./assets/sobha-villa-img3.png"
+                  alt="sobha-villa-img3"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -200,31 +221,108 @@
         <div class="row">
           <div class="col-13">
             <p class="floor-plan-heading">Floor Plan</p>
-            <div class="floor-plan-img">
+            <div class="floor-plan-img" data-aos="fade-up-right">
               <img src="./assets/floor-plan-img.png" alt="" />
             </div>
           </div>
           <div class="col-14">
             <p class="floor-plan-heading">Amenities</p>
-            <div class="checkbox-section">
-              <label><input type="checkbox" checked /> Parking Lot</label>
-              <label><input type="checkbox" checked /> Wi-Fi</label>
-              <label><input type="checkbox" checked /> Gym</label>
-              <label><input type="checkbox" /> Parking Lot</label>
-              <label><input type="checkbox" /> Wi-Fi</label>
-
-              <label><input type="checkbox" checked /> Balcony</label>
-              <label><input type="checkbox" /> Ocean View</label>
-              <label><input type="checkbox" checked /> Near Hospital</label>
-              <label><input type="checkbox" /> Balcony</label>
-              <label><input type="checkbox" /> Ocean View</label>
-
-              <label><input type="checkbox" /> Lawn</label>
-              <label><input type="checkbox" checked /> Fireplace</label>
-              <label><input type="checkbox" checked /> Laundry</label>
-              <label><input type="checkbox" /> Lawn</label>
-              <label><input type="checkbox" /> Fireplace</label>
-            </div>
+            <form action="/" class="checkbox-section">
+              <div class="Amenities1">
+                <label for="parkinglot">
+                  <input
+                    type="checkbox"
+                    name="parkinglot"
+                    id="parkinglot"
+                    checked
+                  />
+                  Parking Lot</label
+                >
+                <label for="wifi"
+                  ><input type="checkbox" name="wifi" id="wifi" checked />
+                  Wi-Fi</label
+                >
+                <label for="gym"
+                  ><input type="checkbox" name="gym" id="gym" checked />
+                  Gym</label
+                >
+                <label for="elevator"
+                  ><input
+                    type="checkbox"
+                    name="elevator"
+                    id="elevator"
+                    checked
+                  />
+                  Elevator</label
+                >
+                <label for="airconditioning"
+                  ><input
+                    type="checkbox"
+                    name="airconditioning"
+                    id="airconditioning"
+                  />
+                  Air Conditioning</label
+                >
+              </div>
+              <div class="Amenities2">
+                <label for="balcony"
+                  ><input type="checkbox" name="balcony" id="balcony" checked />
+                  Balcony</label
+                >
+                <label for="oceanview"
+                  ><input type="checkbox" name="oceanview" id="oceanview" />
+                  Ocean View</label
+                >
+                <label for="hospital"
+                  ><input
+                    type="checkbox"
+                    name="hospital"
+                    id="hospital"
+                    checked
+                  />
+                  Near Hospital</label
+                >
+                <label for="petfriendly"
+                  ><input type="checkbox" name="petfriendly" id="petfriendly" />
+                  Pet Friendly</label
+                >
+                <label for="bathtub"
+                  ><input type="checkbox" name="bathtub" id="bathtub" />
+                  Bathtub</label
+                >
+              </div>
+              <div class="Amenities3">
+                <label for="lawn"
+                  ><input type="checkbox" name="lawn" id="lawn" /> Lawn</label
+                >
+                <label for="fireplace"
+                  ><input
+                    type="checkbox"
+                    name="fireplace"
+                    id="fireplace"
+                    checked
+                  />
+                  Fireplace</label
+                >
+                <label for="laundry"
+                  ><input type="checkbox" name="laundry" id="laundry" checked />
+                  Laundry</label
+                >
+                <label for="furnished"
+                  ><input type="checkbox" name="furnished" id="furnished" />
+                  Furnished</label
+                >
+                <label for="firesafetysystem"
+                  ><input
+                    type="checkbox"
+                    name="firesafetysystem"
+                    id="firesafetysystem"
+                    checked
+                  />
+                  Fire Safety System</label
+                >
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -235,38 +333,38 @@
         <div class="row">
           <div class="col-9">
             <div class="form-container">
-              <form class="contact-form">
+              <form action="/" class="contact-form">
                 <div class="form-row">
                   <div class="form-group">
-                    <label>First Name</label>
-                    <input type="text" placeholder="First Name" />
+                    <label for="fname">First Name</label>
+                    <input type="text" name="fname" id="fname" placeholder="First Name" />
                   </div>
                   <div class="form-group">
-                    <label>Last Name</label>
-                    <input type="text" placeholder="Last name" />
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" id="lname" placeholder="Last name" />
                   </div>
                 </div>
 
                 <div class="form-row">
                   <div class="form-group">
-                    <label>Phone</label>
-                    <input type="text" placeholder="Phone Number" />
+                    <label for="phone">Phone</label>
+                    <input type="text" name="phone" id="phone" placeholder="Phone Number" />
                   </div>
                   <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="Email Address" />
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email Address" />
                   </div>
                 </div>
 
                 <div class="form-row">
                   <div class="form-group full-width">
-                    <label>Massage</label>
-                    <textarea rows="5" placeholder="Massage"></textarea>
+                    <label for="message">Massage</label>
+                    <textarea rows="5" name="message" id="message" placeholder="Massage"></textarea>
                   </div>
                 </div>
 
                 <div class="form-row center">
-                  <button type="submit" class="submit-btn">Submit</button>
+                  <button type="submit" class="submit-btn">Send Message</button>
                 </div>
               </form>
             </div>
@@ -471,24 +569,23 @@
       <div class="container">
         <div class="row">
           <div class="col-6">
-            <div class="newletter-content">
+            <div class="newsletter-content">
               <h2 class="subheading">
                 Newsletter To Get Updated The Latest News
               </h2>
             </div>
           </div>
           <div class="col-6">
-            <div class="email">
+            <form action="/" class="email">
               <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Enter Your Email"
+                aria-label="Email"
               />
-              <div class="other-services-btn">
-                <a href="#">Submit</a>
-              </div>
-            </div>
+              <button type="submit" class="submit-btn">Subscribe</button>
+            </form>
           </div>
         </div>
       </div>
@@ -502,27 +599,31 @@
         <div class="row">
           <div class="footer-div-1">
             <div class="footer-logo">
-              <img src="./assets/verospace-logo.png" alt="" />
+              <a href="./index.html">
+                <img src="./assets/verospace-logo.png" alt="" />
+              </a>
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur. Pharetra ornare aliquet
               nunc dui in scelerporttitor. Proin ullamcorper.
             </p>
             <div class="social-media-icon">
-              <img src="./assets/facebook.png" alt="facebook" />
-              <img src="./assets/twitter.png" alt="twitter" />
-              <img src="./assets/instagram.png" alt="instagram" />
-              <img src="./assets/youtube.png" alt="youtube" />
+              <a href="#"><img src="./assets/facebook.png" alt="facebook" /></a>
+              <a href="#"><img src="./assets/twitter.png" alt="twitter" /></a>
+              <a href="#"
+                ><img src="./assets/instagram.png" alt="instagram"
+              /></a>
+              <a href="#"><img src="./assets/youtube.png" alt="youtube" /></a>
             </div>
           </div>
           <span class="footer-divider"></span>
           <div class="footer-div-2">
             <p class="footer-heading">Useful Links</p>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Properties</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About us</a></li>
+              <li><a href="./properties.html">Properties</a></li>
+              <li><a href="./contact.html">Contact</a></li>
             </ul>
           </div>
           <div class="footer-div-3">
@@ -552,12 +653,12 @@
     <section class="copyright-section">
       <div class="container">
         <div class="row">
-          <div class="copyright-content">
+          <a class="copyright-content" href="#">
             Copyright © 2024 VeroSpace, All rights reserved
-          </div>
+          </a>
           <div class="terms">
-            <p>Term of Service</p>
-            <p>Privacy Policy</p>
+            <a href="#">Term of Service</a>
+            <a href="#">Privacy Policy</a>
           </div>
         </div>
       </div>

@@ -103,7 +103,7 @@
               <p>Search thousands of homes. Find the one that fits you.</p>
             </div>
           </div>
-          <div class="sm-banner-div">
+          <form class="sm-banner-div">
             <div class="sm-banner-div1">
               <div class="custom-dropdown">
                 <div class="dropdown-toggle" id="rentDropdownToggle">
@@ -147,6 +147,7 @@
                 </ul>
               </div>
             </div>
+
             <div class="sm-banner-div2">
               <input
                 type="text"
@@ -164,6 +165,7 @@
                 <input
                   type="range"
                   id="min-range"
+                  name="min-price"
                   min="0"
                   max="20000"
                   value="5000"
@@ -172,6 +174,7 @@
                 <input
                   type="range"
                   id="max-range"
+                  name="max-price"
                   min="0"
                   max="20000"
                   value="15000"
@@ -181,6 +184,7 @@
                 <div class="price-bubble" id="max-bubble">$15,000</div>
               </div>
             </div>
+
             <div class="sm-banner-div3">
               <div class="custom-dropdown">
                 <div class="dropdown-toggle" id="rentDropdownToggle">
@@ -224,13 +228,15 @@
                 </ul>
               </div>
             </div>
+
             <span class="divider"></span>
+
             <div class="sm-banner-div4">
               <div class="search-btn">
-                <a href="#"><span>S</span>earch</a>
+                <button type="submit"><span>S</span>earch</button>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </section>
@@ -991,17 +997,19 @@
             </div>
           </div>
           <div class="col-6">
-            <div class="email">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter Your Email"
-              />
-              <div class="other-services-btn">
-                <a href="#">Submit</a>
+            <form action="#">
+              <div class="email">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter Your Email"
+                />
+                <div class="other-services-btn">
+                  <a href="#">Submit</a>
+                </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

@@ -18,6 +18,10 @@ body {
 
 :root {
   --primary-bg-color: #543ad7;
+  --secondary-bg-color: #a697f0;
+  --primary-text-color: #333333;
+  --secondary-text-color: #666666;
+  --primary-heading-color: #3d3d3d;
 }
 
 .container {
@@ -60,7 +64,7 @@ p {
 
 .subtitle {
   font-size: 20px;
-  color: #3d3d3d;
+  color: var(--primary-heading-color);
   font-weight: 600;
   margin-bottom: 12px !important;
   position: relative;
@@ -83,11 +87,11 @@ p {
   font-weight: 600;
   margin-bottom: 12px;
   text-align: start;
-  color: #333333;
+  color: var(--primary-text-color);
 }
 
 .description {
-  color: #666666;
+  color: var(--secondary-text-color);
   font-size: 18px;
 }
 
@@ -150,7 +154,7 @@ nav,
 }
 
 .nav-links > ul > li > a {
-  color: #3d3d3d;
+  color: var(--primary-heading-color);
 }
 
 .nav-links > ul > li > a:hover {
@@ -158,7 +162,7 @@ nav,
 }
 
 .contact-us {
-  color: #3d3d3d;
+  color: var(--primary-heading-color);
 }
 
 .contact-us:hover {
@@ -172,6 +176,13 @@ nav,
   border-radius: 50px;
   color: white;
   cursor: pointer;
+  font-size: 14px;
+}
+
+.login:hover {
+  background-color: var(--secondary-bg-color);
+  color: black;
+  transform: scale(1.09);
 }
 
 .ham {
@@ -206,7 +217,7 @@ nav,
   text-align: center;
   width: 100%;
   max-width: 400px;
-  margin: 0 15px; /* Add margin for spacing on small screens */
+  margin: 0 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -227,13 +238,13 @@ body.no-scroll {
   font-size: 24px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
-  color: #2e2e2e;
+  color: var(--primary-heading-color);
 }
 
 .login-subtitle {
   font-size: 14px;
   font-family: "Inter", sans-serif;
-  color: #666;
+  color: var(--secondary-text-color);
   margin-bottom: 15px;
 }
 
@@ -257,16 +268,15 @@ input[type="password"] {
 }
 
 .forgot-password a {
-  color: #543ad7;
+  color: var(--primary-bg-color);
   font-size: 14px;
   font-family: Lato, sans-serif;
-  text-decoration: none;
   margin-top: 10px;
 }
 
-button {
+.modal button {
   width: 50%;
-  background-color: #543ad7;
+  background-color: var(--primary-bg-color);
   color: white;
   border: none;
   padding: 14px 0;
@@ -276,6 +286,12 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
   margin: 0 auto;
+}
+
+.modal button:hover {
+  background-color: var(--secondary-bg-color);
+  color: black;
+  transform: scale(1.09);
 }
 
 .create-account {
@@ -295,7 +311,10 @@ button {
 
 .hero-section {
   position: relative;
-  margin: 10px 1.875vw 75px;
+  padding: 10px 1.875vw 110px;
+}
+
+.hero-section > div {
   background: url(../assets/aboutus-banner-section.png) center/cover no-repeat;
   min-height: 500px;
   display: flex;
@@ -304,7 +323,7 @@ button {
   border-radius: 25px;
 }
 
-.hero-section > div {
+.hero-section .container {
   max-width: 1570px;
   display: flex;
   justify-content: center;
@@ -343,10 +362,15 @@ button {
   color: white;
 }
 
+.hero-description > a:hover {
+  font-weight: bold;
+}
+
 /* villa details */
 
 .villa-details-section {
   margin-bottom: 150px;
+  margin-inline: 15px;
 }
 
 .villa-details-section > .container {
@@ -453,10 +477,27 @@ button {
 }
 
 .sobha-villa-img {
-  max-width: 725px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
 }
 
-.sobha-villa-img > img {
+.sobha-villa-img1 {
+  max-width: 308px;
+}
+
+.sobha-villa-img1 > img:first-child {
+  margin-bottom: 11px;
+}
+
+.sobha-villa-img2 {
+  max-width: 404px;
+  flex-shrink: 1;
+}
+
+.sobha-villa-img1 > img,
+.sobha-villa-img2 > img {
   width: 100%;
   object-fit: contain;
 }
@@ -494,24 +535,23 @@ button {
 }
 
 .checkbox-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px 20px;
-  max-width: 700px;
-  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 50px;
 }
 
 .checkbox-section label {
-  font-size: 14px;
+  font-size: 18px;
   font-family: "Lato", sans-serif;
   color: #999999;
   display: flex;
   align-items: center;
   gap: 6px;
   margin-bottom: 18px;
+  text-wrap: nowrap;
 }
-
-/* get in touch section */
 
 /* get in touch section */
 
@@ -590,10 +630,16 @@ button {
   border: none;
   background: var(--primary-bg-color);
   color: white;
-  font-weight: bold;
   border-radius: 25px;
   text-transform: uppercase;
   cursor: pointer;
+  text-wrap: nowrap;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-bg-color);
+  color: black;
+  transform: scale(1.09);
 }
 
 /* Newly listed properties section */
@@ -613,6 +659,12 @@ button {
   color: white;
   padding: 11px 22px;
   border-radius: 25px;
+}
+
+.all-listing-btn > a:hover {
+  background-color: var(--secondary-bg-color);
+  color: black;
+  transform: scale(1.09);
 }
 
 .newproperties-section .container {
@@ -769,31 +821,23 @@ button {
   width: 50%;
 }
 
-.newletter-content > .subheading {
+.newsletter-content > .subheading {
   max-width: 455px;
   text-align: start;
   margin-bottom: 0px;
 }
 
-.email {
+.newsletter-section .email {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
 }
 
-#email {
+.newsletter-section #email {
   border: 1px solid #333333;
   width: 404px;
   padding: 15px 20px;
-  border-radius: 25px;
-}
-
-.other-services-btn > a {
-  text-transform: uppercase;
-  padding: 12px 32px;
-  background-color: var(--primary-bg-color);
-  color: white;
   border-radius: 25px;
 }
 
@@ -817,6 +861,10 @@ footer > div > div {
   max-width: 140px;
 }
 
+.footer-logo > a {
+  max-width: 140px;
+}
+
 .footer-logo > img {
   width: 100%;
   object-fit: contain;
@@ -829,9 +877,13 @@ footer > div > div {
   gap: 23px;
 }
 
-.social-media-icon > img {
+.social-media-icon > a > img {
   max-width: 40px;
   object-fit: contain;
+}
+
+.social-media-icon > a > img:hover {
+  transform: scale(1.05);
 }
 
 .footer-divider {
@@ -889,6 +941,11 @@ footer > div > div {
   font-weight: 600;
 }
 
+.copyright-content:hover {
+  color: black;
+  font-weight: bold;
+}
+
 .terms {
   display: flex;
   justify-content: center;
@@ -896,9 +953,14 @@ footer > div > div {
   gap: 27px;
 }
 
-.terms > p {
+.terms > a {
   font-weight: 600;
   color: #666666;
+}
+
+.terms > a:hover {
+  color: black;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {
@@ -932,7 +994,7 @@ footer > div > div {
 
   .col-9 {
     width: 100% !important;
-    margin-top: 50px !important;
+    margin-top: 25px !important;
   }
 
   /* newsletter section */
@@ -942,7 +1004,7 @@ footer > div > div {
     gap: 50px;
   }
 
-  .newletter-content > .subheading {
+  .newsletter-content > .subheading {
     text-align: center;
     margin: 0 auto;
   }
@@ -980,6 +1042,10 @@ footer > div > div {
 
 @media screen and (max-width: 1024px) {
   /* Hero section */
+
+  .hero-section {
+    padding-bottom: 50px;
+  }
 
   .hero-content > h1 {
     font-size: 39px;
@@ -1061,6 +1127,10 @@ footer > div > div {
   .smscreen-nav-links > li > a {
     font-size: 12px;
     color: #3d3d3d;
+  }
+
+  .smscreen-nav-links > ul > li > a:hover {
+    color: var(--primary-bg-color);
   }
 
   .nav-btn {
@@ -1155,6 +1225,10 @@ footer > div > div {
 
   /* Floor plan section */
 
+  .floor-plan-section {
+    margin-bottom: 50px;
+  }
+
   .col-13 {
     width: 100%;
     display: flex;
@@ -1168,8 +1242,29 @@ footer > div > div {
     margin-top: 50px;
   }
 
+  .checkbox-section {
+    justify-content: center;
+  }
+
+  .checkbox-section label {
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+    color: #999999;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 18px;
+    text-wrap: nowrap;
+  }
+
   .floor-plan-heading {
     text-align: center;
+  }
+
+  /* get in touch section */
+
+  .get-in-touch-section > div > div {
+    flex-direction: column-reverse;
   }
 
   /* newly listed property section */
@@ -1245,6 +1340,10 @@ footer > div > div {
     margin-bottom: 75px;
   }
 
+  .sobha-villa-img1 {
+    max-width: 250px;
+  }
+
   /* copyright section */
 
   .copyright-section > div > div {
@@ -1274,7 +1373,7 @@ footer > div > div {
     padding: 12px 16px;
   }
 
-  button {
+  .modal button {
     font-size: 14px;
     padding: 12px 0;
     width: 50%;
@@ -1287,7 +1386,7 @@ footer > div > div {
   /* Hero section */
 
   .hero-section {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
 
   .hero-content > h1 {
@@ -1320,6 +1419,11 @@ footer > div > div {
   .sobha-villa-description1,
   .sobha-villa-description2 {
     font-size: 12px;
+  }
+
+  .sobha-villa-img1 {
+    max-width: 160px;
+    flex-shrink: 1;
   }
 
   /* get in touch section */
@@ -1373,10 +1477,6 @@ footer > div > div {
     font-size: 8px;
   }
 
-  .other-services-btn > a {
-    font-size: 12px;
-  }
-
   /* our commitments section */
 
   .aspects-description {
@@ -1403,6 +1503,10 @@ footer > div > div {
   }
 
   /* Hero section */
+
+  .hero-section {
+    padding-bottom: 15px;
+  }
 
   .hero-description > a {
     font-size: 12px;
@@ -1434,8 +1538,14 @@ footer > div > div {
     gap: 25px;
   }
 
+  /* floor plan section */
+
   .floor-plan-section {
     margin-bottom: 0px;
+  }
+
+  .checkbox-section label {
+    font-size: 12px;
   }
 
   /* get in touch section */
@@ -1449,13 +1559,17 @@ footer > div > div {
     border-radius: 8px;
   }
 
-  /* newsletter section */
-
-  .email {
+  .contact-form .form-row:nth-child(2) {
     flex-direction: column;
   }
 
-  #email {
+  /* newsletter section */
+
+  .newsletter-section .email {
+    flex-direction: column;
+  }
+
+  .newsletter-section #email {
     width: 304px;
   }
 
@@ -1494,7 +1608,7 @@ footer > div > div {
   /* copyright section */
 
   .copyright-content,
-  .terms > p {
+  .terms > a {
     text-align: center;
     font-size: 12px;
   }

@@ -18,6 +18,10 @@ body {
 
 :root {
   --primary-bg-color: #543ad7;
+  --secondary-bg-color: #a697f0;
+  --primary-text-color: #333333;
+  --secondary-text-color: #666666;
+  --primary-heading-color: #3d3d3d;
 }
 
 .container {
@@ -77,11 +81,11 @@ a {
   font-weight: 600;
   margin-bottom: 12px;
   text-align: start;
-  color: #333333;
+  color: var(--primary-text-color);
 }
 
 .content .description {
-  color: #666666;
+  color: var(--secondary-text-color);
   font-size: 18px;
 }
 
@@ -167,6 +171,13 @@ nav,
   border-radius: 50px;
   color: white;
   cursor: pointer;
+  font-size: 14px;
+}
+
+.login:hover {
+  background-color: var(--secondary-bg-color);
+  color: black;
+  transform: scale(1.09);
 }
 
 .ham {
@@ -201,7 +212,7 @@ nav,
   text-align: center;
   width: 100%;
   max-width: 400px;
-  margin: 0 15px; /* Add margin for spacing on small screens */
+  margin: 0 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -273,6 +284,12 @@ input[type="password"] {
   margin: 0 auto;
 }
 
+.custom-modal button:hover {
+  background-color: var(--secondary-bg-color);
+  color: black;
+  transform: scale(1.09);
+}
+
 .create-account {
   margin-top: 10px;
   font-size: 13px;
@@ -290,7 +307,10 @@ input[type="password"] {
 
 .hero-section {
   position: relative;
-  margin: 10px 1.875vw 75px;
+  padding: 10px 1.875vw 110px;
+}
+
+.hero-section > div {
   background: url(../assets/aboutus-banner-section.png) center/cover no-repeat;
   min-height: 500px;
   display: flex;
@@ -299,7 +319,7 @@ input[type="password"] {
   border-radius: 25px;
 }
 
-.hero-section > div {
+.hero-section .container {
   max-width: 1570px;
   display: flex;
   justify-content: center;
@@ -315,6 +335,7 @@ input[type="password"] {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 0;
+  font-weight: 500;
 }
 
 .letter {
@@ -337,6 +358,10 @@ input[type="password"] {
   font-size: 18px;
   margin-bottom: 0 !important;
   color: white;
+}
+
+.hero-description > a:hover {
+  font-weight: bold;
 }
 
 /* get in touch section */
@@ -458,10 +483,16 @@ input[type="password"] {
   border: none;
   background: var(--primary-bg-color);
   color: white;
-  font-weight: bold;
   border-radius: 25px;
   text-transform: uppercase;
   cursor: pointer;
+  text-wrap: nowrap;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-bg-color);
+  color: black;
+  transform: scale(1.09);
 }
 
 /* FAQ Section */
@@ -518,14 +549,14 @@ input[type="password"] {
   margin-bottom: 0px;
 }
 
-.email {
+.newsletter-section .email {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
 }
 
-#email {
+.newsletter-section #email {
   border: 1px solid #333333;
   width: 404px;
   padding: 15px 20px;
@@ -799,7 +830,11 @@ footer > div > div {
 
   .smscreen-nav-links > li > a {
     font-size: 12px;
-    color: #3d3d3d;
+    color: var(--primary-heading-color);
+  }
+
+  .smscreen-nav-links > ul > li > a:hover {
+    color: var(--primary-bg-color);
   }
 
   .nav-btn {
@@ -1031,11 +1066,11 @@ footer > div > div {
 
   /* newsletter section */
 
-  .email {
+  .newsletter-section .email {
     flex-direction: column;
   }
 
-  #email {
+  .newsletter-section #email {
     width: 304px;
   }
 

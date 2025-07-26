@@ -18,6 +18,10 @@ body {
 
 :root {
   --primary-bg-color: #543ad7;
+  --secondary-bg-color: #a697f0;
+  --primary-text-color: #333333;
+  --secondary-text-color: #666666;
+  --primary-heading-color: #3d3d3d;
 }
 
 .container {
@@ -117,7 +121,7 @@ nav,
 }
 
 .nav-links > ul > li > a {
-  color: #3d3d3d;
+  color: var(--primary-heading-color);
 }
 
 .nav-links > ul > li > a:hover {
@@ -125,7 +129,7 @@ nav,
 }
 
 .contact-us {
-  color: #3d3d3d;
+  color: var(--primary-heading-color);
 }
 
 .contact-us:hover {
@@ -138,6 +142,14 @@ nav,
   padding: 7px 23px;
   border-radius: 50px;
   color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.login:hover {
+  background-color: var(--secondary-bg-color);
+  color: black;
+  transform: scale(1.09);
 }
 
 .ham {
@@ -165,16 +177,6 @@ nav,
   display: flex;
 }
 
-/* .modal {
-  background: #f7f8fa;
-  border-radius: 20px;
-  padding: 40px 30px;
-  text-align: center;
-  max-width: 400px;
-  width: 100%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-} */
-
 .modal {
   background: #f7f8fa;
   border-radius: 20px;
@@ -182,7 +184,7 @@ nav,
   text-align: center;
   width: 100%;
   max-width: 400px;
-  margin: 0 15px; /* Add margin for spacing on small screens */
+  margin: 0 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -203,13 +205,13 @@ body.no-scroll {
   font-size: 24px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
-  color: #2e2e2e;
+  color: var(--primary-heading-color);
 }
 
 .login-subtitle {
   font-size: 14px;
   font-family: "Inter", sans-serif;
-  color: #666;
+  color: var(--secondary-text-color);
   margin-bottom: 15px;
 }
 
@@ -236,13 +238,12 @@ input[type="password"] {
   color: #543ad7;
   font-size: 14px;
   font-family: Lato, sans-serif;
-  text-decoration: none;
   margin-top: 10px;
 }
 
-button {
+.modal button {
   width: 50%;
-  background-color: #543ad7;
+  background-color: var(--primary-bg-color);
   color: white;
   border: none;
   padding: 14px 0;
@@ -252,6 +253,12 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
   margin: 0 auto;
+}
+
+.modal button:hover {
+  background-color: var(--secondary-bg-color);
+  color: black;
+  transform: scale(1.09);
 }
 
 .create-account {
@@ -271,10 +278,10 @@ button {
 
 .banner-section {
   position: relative;
+  padding: 10px 1.875vw 160px;
 }
 
 .banner-section > div {
-  margin: 10px 1.875vw 160px;
   background: url(../assets/banner-image.png) center/cover no-repeat;
   min-height: 100vh;
   display: flex;
@@ -559,18 +566,23 @@ input[type="range"]::-moz-range-thumb {
 
 .hero-section {
   position: relative;
-  margin-bottom: 75px;
+  padding: 10px 1.875vw 90px;
 }
 
 .hero-section > div {
-  max-width: 1570px;
-  margin-top: 10px;
   background: url(../assets/aboutus-banner-section.png) center/cover no-repeat;
   min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
+}
+
+.hero-section .container {
+  max-width: 1570px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-content {
@@ -605,11 +617,11 @@ input[type="range"]::-moz-range-thumb {
   color: white;
 }
 
-/* Apartment types section */
+.hero-description > a:hover {
+  font-weight: bold;
+}
 
-/* .apartment-types-section {
-  margin-bottom: 75px;
-} */
+/* Apartment types section */
 
 .subheading {
   font-size: 32px;
@@ -1459,7 +1471,7 @@ input[type="range"]::-moz-range-thumb {
   width: 50%;
 }
 
-.newletter-content > .subheading {
+.newsletter-content > .subheading {
   max-width: 455px;
   text-align: start;
   margin-bottom: 0px;
@@ -1477,6 +1489,23 @@ input[type="range"]::-moz-range-thumb {
   width: 404px;
   padding: 15px 20px;
   border-radius: 25px;
+}
+
+.submit-btn {
+  padding: 12px 30px;
+  border: none;
+  background: var(--primary-bg-color);
+  color: white;
+  border-radius: 25px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-bg-color);
+  color: black;
+  transform: scale(1.09);
 }
 
 /* footer section */
@@ -1499,7 +1528,11 @@ footer > div > div {
   max-width: 140px;
 }
 
-.footer-logo > img {
+.footer-logo > a {
+  max-width: 140px;
+}
+
+.footer-logo > a > img {
   width: 100%;
   object-fit: contain;
 }
@@ -1511,9 +1544,13 @@ footer > div > div {
   gap: 23px;
 }
 
-.social-media-icon > img {
+.social-media-icon > a > img {
   max-width: 40px;
   object-fit: contain;
+}
+
+.social-media-icon > a > img:hover {
+  transform: scale(1.05);
 }
 
 .footer-divider {
@@ -1550,9 +1587,13 @@ footer > div > div {
   gap: 8px;
 }
 
-.property-images > img {
+.property-images a img {
   max-width: 95px;
   object-fit: contain;
+}
+
+.property-images a img:hover {
+transform: scale(1.05);
 }
 
 /* copyright  section */
@@ -1571,6 +1612,11 @@ footer > div > div {
   font-weight: 600;
 }
 
+.copyright-content:hover {
+  color: black;
+  font-weight: bold;
+}
+
 .terms {
   display: flex;
   justify-content: center;
@@ -1578,9 +1624,14 @@ footer > div > div {
   gap: 27px;
 }
 
-.terms > p {
+.terms > a {
   font-weight: 600;
   color: #666666;
+}
+
+.terms > a:hover {
+  color: black;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1699,7 +1750,7 @@ footer > div > div {
     gap: 50px;
   }
 
-  .newletter-content > .subheading {
+  .newsletter-content > .subheading {
     text-align: center;
     margin: 0 auto;
   }
@@ -1823,7 +1874,11 @@ footer > div > div {
 
   .smscreen-nav-links > li > a {
     font-size: 12px;
-    color: #3d3d3d;
+    color: var(--primary-heading-color);
+  }
+
+  .smscreen-nav-links > ul > li > a:hover {
+    color: var(--primary-bg-color);
   }
 
   .nav-btn {
@@ -1872,8 +1927,8 @@ footer > div > div {
 
   /* Banner section */
 
-  .banner-section > div {
-    margin-bottom: 50px;
+  .banner-section {
+    padding-bottom: 50px;
   }
 
   .properties-section {
@@ -2176,7 +2231,7 @@ footer > div > div {
 
   /* Hero section */
   .hero-section {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
 
   .hero-content > h1 {
@@ -2340,6 +2395,12 @@ footer > div > div {
 
   .trusted-companies-section h3 {
     font-size: 16px;
+  }
+
+  /* newsletter section */
+
+  .submit-btn {
+    font-size: 12px;
   }
 }
 
@@ -2533,7 +2594,7 @@ footer > div > div {
   /* copyright section */
 
   .copyright-content,
-  .terms > p {
+  .terms > a {
     text-align: center;
     font-size: 12px;
   }
