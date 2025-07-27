@@ -57,7 +57,7 @@
             </ul>
             <div class="nav-btn">
               <a class="contact-us" href="./contact.html">Contact us</a>
-              <a id="openModal" class="login">LOGIN</a>
+              <button id="openModal" class="login">LOGIN</button>
               <div class="modal-overlay" id="modalOverlay">
                 <div class="modal">
                   <div class="login-container">
@@ -66,9 +66,23 @@
                       Hey, enter your detail to get login<br />to your account
                     </p>
 
-                    <form>
-                      <input type="text" placeholder="username" required />
-                      <input type="password" placeholder="password" required />
+                    <form action="/">
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="username"
+                        aria-label="Username"
+                        required
+                      />
+                      <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="password"
+                        aria-label="password"
+                        required
+                      />
                       <div class="forgot-password">
                         <a href="#">Forgot password?</a>
                       </div>
@@ -77,9 +91,9 @@
 
                     <p class="create-account">
                       You don’t have an account?
-                      <a href="./registration.html">Create an account</a>
+                      <a href="#">Create an account</a>
                     </p>
-                    <button id="closeModal">Close</button>
+                    <button type="button" id="closeModal">Close</button>
                   </div>
                 </div>
               </div>
@@ -103,61 +117,40 @@
               <p>Search thousands of homes. Find the one that fits you.</p>
             </div>
           </div>
-          <form class="sm-banner-div">
+          <form action="#" class="sm-banner-div">
             <div class="sm-banner-div1">
               <div class="custom-dropdown">
-                <div class="dropdown-toggle" id="rentDropdownToggle">
-                  <div class="properties">
-                    <div class="sm-banner-div-img">
-                      <img src="./assets/rent.png" alt="Rent" />
-                    </div>
-                    <p>Rent</p>
-                  </div>
-                  <div class="arrow">
-                    <img src="./assets/arrow-down.png" alt="Arrow" />
-                  </div>
+                <div class="sm-banner-div-img">
+                  <img src="./assets/rent.png" alt="" />
                 </div>
-
-                <ul class="dropdown-menu" id="rentDropdownMenu">
-                  <li>Rent</li>
-                  <li>Buy</li>
-                  <li>Lease</li>
-                </ul>
+                <label for="property" hidden>Select Property Type</label>
+                <select name="property" id="property" class="dropdown-menu">
+                  <option value="rent" selected>Rent</option>
+                  <option value="buy">Buy</option>
+                  <option value="lease">Lease</option>
+                </select>
               </div>
-
-              <!-- USD Dropdown -->
               <div class="custom-dropdown">
-                <div class="dropdown-toggle" id="currencyDropdownToggle">
-                  <div class="properties">
-                    <div class="sm-banner-div-img">
-                      <img src="./assets/usd.png" alt="USD" />
-                    </div>
-                    <p>USD</p>
-                  </div>
-                  <div class="arrow">
-                    <img src="./assets/arrow-down.png" alt="Arrow" />
-                  </div>
+                <div class="sm-banner-div-img">
+                  <img src="./assets/usd.png" alt="" />
                 </div>
-
-                <ul class="dropdown-menu" id="currencyDropdownMenu">
-                  <li>USD</li>
-                  <li>EUR</li>
-                  <li>INR</li>
-                  <li>GBP</li>
-                </ul>
+                <label for="currency" hidden>Select Currency Type</label>
+                <select name="currency" id="currency" class="dropdown-menu">
+                  <option value="USD" selected>USD</option>
+                  <option value="INR">INR</option>
+                  <option value="EUR">EUR</option>
+                </select>
               </div>
             </div>
-
             <div class="sm-banner-div2">
               <input
                 type="text"
                 name="location"
                 id="location"
-                placeholder="Your desiered location goes here"
+                placeholder="Your desired location goes here"
+                aria-label="location"
               />
-
               <p class="price">Price Range</p>
-
               <div class="range-container">
                 <div class="slider">
                   <div class="progress"></div>
@@ -166,6 +159,7 @@
                   type="range"
                   id="min-range"
                   name="min-price"
+                  aria-label="Minimum price"
                   min="0"
                   max="20000"
                   value="5000"
@@ -175,6 +169,7 @@
                   type="range"
                   id="max-range"
                   name="max-price"
+                  aria-label="Maximum price"
                   min="0"
                   max="20000"
                   value="15000"
@@ -187,188 +182,40 @@
 
             <div class="sm-banner-div3">
               <div class="custom-dropdown">
-                <div class="dropdown-toggle" id="rentDropdownToggle">
-                  <div class="properties">
-                    <div class="sm-banner-div-img">
-                      <img src="./assets/house.png" alt="Rent" />
-                    </div>
-                    <p>House</p>
-                  </div>
-                  <div class="arrow">
-                    <img src="./assets/arrow-down.png" alt="Arrow" />
-                  </div>
+                <div class="sm-banner-div-img">
+                  <img src="./assets/house.png" alt="" />
                 </div>
-
-                <ul class="dropdown-menu" id="rentDropdownMenu">
-                  <li>House</li>
-                  <li>Apartment</li>
-                  <li>Villa</li>
-                  <li>Studio</li>
-                </ul>
+                <label for="house" hidden>Select House Type</label>
+                <select name="house" id="house" class="dropdown-menu">
+                  <option value="house" selected>House</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="villa">Villa</option>
+                  <option value="residential">Residential</option>
+                  <option value="commercial">Commercial</option>
+                  <option value="warehouse">Warehouse</option>
+                </select>
               </div>
 
               <div class="custom-dropdown">
-                <div class="dropdown-toggle" id="rentDropdownToggle">
-                  <div class="properties">
-                    <div class="sm-banner-div-img">
-                      <img src="./assets/rooms.png" alt="Rent" />
-                    </div>
-                    <p>Room</p>
-                  </div>
-                  <div class="arrow">
-                    <img src="./assets/arrow-down.png" alt="Arrow" />
-                  </div>
+                <div class="sm-banner-div-img">
+                  <img src="./assets/rooms.png" alt="" />
                 </div>
-
-                <ul class="dropdown-menu" id="rentDropdownMenu">
-                  <li>1 Room</li>
-                  <li>2 Rooms</li>
-                  <li>3 Rooms</li>
-                  <li>4+ Rooms</li>
-                </ul>
+                <label for="room" hidden>Select No Of Rooms</label>
+                <select name="room" id="room" class="dropdown-menu">
+                  <option value="1room">1 room</option>
+                  <option value="2rooms" selected>2 Rooms</option>
+                  <option value="3rooms">3 Rooms</option>
+                  <option value="4+rooms">4+ Rooms</option>
+                </select>
               </div>
             </div>
 
             <span class="divider"></span>
 
             <div class="sm-banner-div4">
-              <div class="search-btn">
-                <button type="submit"><span>S</span>earch</button>
-              </div>
+              <button class="search-btn" type="submit">Search</button>
             </div>
           </form>
-        </div>
-      </div>
-    </section>
-    <section class="properties-section">
-      <div class="container">
-        <div class="sm-screen-banner-div">
-          <div class="sm-banner-div1">
-            <div class="custom-dropdown">
-              <div class="dropdown-toggle" id="rentDropdownToggle">
-                <div class="properties">
-                  <div class="sm-banner-div-img">
-                    <img src="./assets/rent.png" alt="Rent" />
-                  </div>
-                  <p>Rent</p>
-                </div>
-                <div class="arrow">
-                  <img src="./assets/arrow-down.png" alt="Arrow" />
-                </div>
-              </div>
-
-              <ul class="dropdown-menu" id="rentDropdownMenu">
-                <li>Rent</li>
-                <li>Buy</li>
-                <li>Lease</li>
-              </ul>
-            </div>
-
-            <!-- USD Dropdown -->
-            <div class="custom-dropdown">
-              <div class="dropdown-toggle" id="currencyDropdownToggle">
-                <div class="properties">
-                  <div class="sm-banner-div-img">
-                    <img src="./assets/usd.png" alt="USD" />
-                  </div>
-                  <p>USD</p>
-                </div>
-                <div class="arrow">
-                  <img src="./assets/arrow-down.png" alt="Arrow" />
-                </div>
-              </div>
-
-              <ul class="dropdown-menu" id="currencyDropdownMenu">
-                <li>USD</li>
-                <li>EUR</li>
-                <li>INR</li>
-                <li>GBP</li>
-              </ul>
-            </div>
-          </div>
-          <div class="sm-banner-div2">
-            <input
-              type="text"
-              name="location"
-              id="location"
-              placeholder="Your desiered location goes here"
-            />
-
-            <p class="price">Price Range</p>
-
-            <div class="range-container">
-              <div class="slider">
-                <div class="progress"></div>
-              </div>
-              <input
-                type="range"
-                id="min-range"
-                min="0"
-                max="20000"
-                value="5000"
-                step="1"
-              />
-              <input
-                type="range"
-                id="max-range"
-                min="0"
-                max="20000"
-                value="15000"
-                step="1"
-              />
-              <div class="price-bubble" id="min-bubble">$5,000</div>
-              <div class="price-bubble" id="max-bubble">$15,000</div>
-            </div>
-          </div>
-          <div class="sm-banner-div3">
-            <div class="custom-dropdown">
-              <div class="dropdown-toggle" id="rentDropdownToggle">
-                <div class="properties">
-                  <div class="sm-banner-div-img">
-                    <img src="./assets/house.png" alt="Rent" />
-                  </div>
-                  <p>House</p>
-                </div>
-                <div class="arrow">
-                  <img src="./assets/arrow-down.png" alt="Arrow" />
-                </div>
-              </div>
-
-              <ul class="dropdown-menu" id="rentDropdownMenu">
-                <li>House</li>
-                <li>Apartment</li>
-                <li>Villa</li>
-                <li>Studio</li>
-              </ul>
-            </div>
-
-            <div class="custom-dropdown">
-              <div class="dropdown-toggle" id="rentDropdownToggle">
-                <div class="properties">
-                  <div class="sm-banner-div-img">
-                    <img src="./assets/rooms.png" alt="Rent" />
-                  </div>
-                  <p>Room</p>
-                </div>
-                <div class="arrow">
-                  <img src="./assets/arrow-down.png" alt="Arrow" />
-                </div>
-              </div>
-
-              <ul class="dropdown-menu" id="rentDropdownMenu">
-                <li>1 Room</li>
-                <li>2 Rooms</li>
-                <li>3 Rooms</li>
-                <li>4+ Rooms</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="sm-banner-div4">
-            <div class="search-btn">
-              <a href="#"><span>S</span>earch</a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -728,7 +575,7 @@
                 urna. Sodales
               </p>
               <div class="other-services-btn">
-                <a href="./properties2.html">Submit property</a>
+                <a href="#">Submit property</a>
               </div>
             </div>
           </div>
@@ -990,25 +837,22 @@
       <div class="container">
         <div class="row">
           <div class="col-6">
-            <div class="newletter-content">
+            <div class="newsletter-content">
               <h2 class="subheading">
                 Newsletter To Get Updated The Latest News
               </h2>
             </div>
           </div>
           <div class="col-6">
-            <form action="#">
-              <div class="email">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Enter Your Email"
-                />
-                <div class="other-services-btn">
-                  <a href="#">Submit</a>
-                </div>
-              </div>
+            <form action="/" class="email">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter Your Email"
+                aria-label="Email"
+              />
+              <button type="submit" class="submit-btn">Subscribe</button>
             </form>
           </div>
         </div>
@@ -1023,43 +867,63 @@
         <div class="row">
           <div class="footer-div-1">
             <div class="footer-logo">
-              <img src="./assets/verospace-logo.png" alt="" />
+              <a href="./index.html">
+                <img src="./assets/verospace-logo.png" alt="" />
+              </a>
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur. Pharetra ornare aliquet
               nunc dui in scelerporttitor. Proin ullamcorper.
             </p>
             <div class="social-media-icon">
-              <img src="./assets/facebook.png" alt="facebook" />
-              <img src="./assets/twitter.png" alt="twitter" />
-              <img src="./assets/instagram.png" alt="instagram" />
-              <img src="./assets/youtube.png" alt="youtube" />
+              <a href="#"><img src="./assets/facebook.png" alt="facebook" /></a>
+              <a href="#"><img src="./assets/twitter.png" alt="twitter" /></a>
+              <a href="#"
+                ><img src="./assets/instagram.png" alt="instagram"
+              /></a>
+              <a href="#"><img src="./assets/youtube.png" alt="youtube" /></a>
             </div>
           </div>
           <span class="footer-divider"></span>
           <div class="footer-div-2">
             <p class="footer-heading">Useful Links</p>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Properties</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About us</a></li>
+              <li><a href="./properties.html">Properties</a></li>
+              <li><a href="./contact.html">Contact</a></li>
             </ul>
           </div>
           <div class="footer-div-3">
             <p class="footer-heading">Our Properties</p>
             <div class="property-images">
               <div class="property-images1">
-                <img src="./assets/property1.png" alt="property1" />
-                <img src="./assets/property2.png" alt="property2" />
-                <img src="./assets/property3.png" alt="property3" />
-                <img src="./assets/property4.png" alt="property4" />
+                <a href="./propertydetails.html"
+                  ><img src="./assets/property1.png" alt="property1"
+                /></a>
+                <a href="./propertydetails.html">
+                  <img src="./assets/property2.png" alt="property2"
+                /></a>
+                <a href="./propertydetails.html">
+                  <img src="./assets/property3.png" alt="property3"
+                /></a>
+                <a href="./propertydetails.html">
+                  <img src="./assets/property4.png" alt="property4"
+                /></a>
               </div>
               <div class="property-images2">
-                <img src="./assets/property5.png" alt="property5" />
-                <img src="./assets/property6.png" alt="property6" />
-                <img src="./assets/property7.png" alt="property7" />
-                <img src="./assets/property8.png" alt="property8" />
+                <a href="./propertydetails.html">
+                  <img src="./assets/property5.png" alt="property5"
+                /></a>
+                <a href="./propertydetails.html">
+                  <img src="./assets/property6.png" alt="property6"
+                /></a>
+                <a href="./propertydetails.html">
+                  <img src="./assets/property7.png" alt="property7"
+                /></a>
+                <a href="./propertydetails.html">
+                  <img src="./assets/property8.png" alt="property8"
+                /></a>
               </div>
             </div>
           </div>
@@ -1073,12 +937,12 @@
     <section class="copyright-section">
       <div class="container">
         <div class="row">
-          <div class="copyright-content">
+          <a class="copyright-content" href="#">
             Copyright © 2024 VeroSpace, All rights reserved
-          </div>
+          </a>
           <div class="terms">
-            <p>Term of Service</p>
-            <p>Privacy Policy</p>
+            <a href="#">Term of Service</a>
+            <a href="#">Privacy Policy</a>
           </div>
         </div>
       </div>
