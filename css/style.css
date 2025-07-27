@@ -1446,7 +1446,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* footer section */
-/* footer section */
 footer {
   padding: 30px 0 55px;
 }
@@ -1696,6 +1695,8 @@ footer > div > div {
     text-align: center;
     margin: 0 auto;
   }
+
+  /* footer section */
 
   footer > div > div {
     justify-content: center;
@@ -2510,8 +2511,6 @@ footer > div > div {
   #email {
     width: 304px;
   }
-
-  /* footer section */
 
   /* footer section */
 
