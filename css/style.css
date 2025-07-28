@@ -749,10 +749,14 @@ input[type="range"]::-moz-range-thumb {
   transform: scale(1.09);
 }
 
-.newproperties-section .container {
+.newproperties-section {
+  padding: 50px 15px;
+}
+
+.properties-wrppr {
   background-color: #f7f8fa;
   border-radius: 14px;
-  padding: 50px 25px;
+  padding-block: 50px;
 }
 
 .properties-content-header > h3 {
@@ -1156,10 +1160,14 @@ input[type="range"]::-moz-range-thumb {
 
 /* testimonial section */
 
-.testimonial-section .container {
-  background-color: #f7f8fa;
+.testimonial-section {
+  padding: 50px 15px;
+}
+
+.testimonials-wrppr {
+ 
   border-radius: 14px;
-  padding: 50px 25px;
+  padding-block: 50px;
 }
 
 .testimonial-section .subtitle {
@@ -1173,11 +1181,11 @@ input[type="range"]::-moz-range-thumb {
   min-height: fit-content;
   display: flex;
   justify-content: center;
+   background-color: #f7f8fa;
   /* align-items: center; */
-  background: var(--color-off-white-2);
   margin: 0 auto;
   border-radius: 40px;
-  padding: 15px 0;
+  padding: 50px 0;
 }
 
 .testimonial-section .swiper {
@@ -2564,6 +2572,6 @@ footer > div > div {
 
   .testimonial-card {
     width: 185px;
-    right: -32px !important;
+    right: -25px !important;
   }
 }
