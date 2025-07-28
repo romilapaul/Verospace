@@ -334,16 +334,18 @@ input[type="password"] {
 
 .sm-banner-div {
   max-width: 880px;
+  width: 100%;
   background-color: white;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   border-radius: 15px;
   padding: 28px 24px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 25px;
   position: absolute;
-  bottom: -15px;
+  bottom: -5px;
 }
 
 .custom-dropdown {
@@ -357,6 +359,7 @@ input[type="password"] {
 }
 
 .custom-dropdown-menu {
+  flex: 1;
   outline: none;
   border: none;
   background-color: #f5f5f5;
@@ -1229,15 +1232,27 @@ footer > div > div {
   }
 
   .custom-dropdown-menu {
-    outline: none;
-    border: none;
-    background-color: #f5f5f5;
     font-size: 12px;
   }
 
   .sm-banner-div {
     bottom: -200px;
+  }
+
+  .sm-banner-div {
     flex-direction: column;
+    max-width: 80%;
+  }
+
+  .sm-banner-div1,
+  .sm-banner-div2,
+  .sm-banner-div3 {
+    width: 100%;
+  }
+
+  .custom-dropdown,
+  #location {
+    width: 100%;
   }
 
   .divider {
@@ -1573,16 +1588,16 @@ footer > div > div {
     font-size: 12px;
   }
 
+  #location {
+    min-width: 200px;
+  }
+
   .email {
     flex-direction: column;
   }
 
   #email {
     max-width: 300px;
-  }
-
-  .custom-dropdown {
-    width: 125px;
   }
 
   /* newsletter section */
@@ -1639,9 +1654,5 @@ footer > div > div {
 @media screen and (max-width: 375px) {
   .sm-screen-banner-div {
     padding: 28px 0px;
-  }
-
-  #location {
-    min-width: 250px;
   }
 }

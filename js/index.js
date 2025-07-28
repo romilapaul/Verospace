@@ -64,6 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// for input type range
+
 const minRange = document.getElementById("min-range");
 const maxRange = document.getElementById("max-range");
 const minBubble = document.getElementById("min-bubble");
