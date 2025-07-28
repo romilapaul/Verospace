@@ -172,6 +172,7 @@ nav,
   color: white;
   cursor: pointer;
   font-size: 14px;
+  border: none;
 }
 
 .login:hover {
@@ -248,7 +249,7 @@ input[type="password"] {
   width: 100%;
   padding: 14px 20px;
   border: none;
-  border-radius: 999px;
+  border-radius: 50px;
   background-color: #fff;
   font-size: 14px;
   outline: none;
@@ -263,7 +264,7 @@ input[type="password"] {
 }
 
 .forgot-password a {
-  color: #543ad7;
+  color: var(--primary-bg-color);
   font-size: 14px;
   font-family: Lato, sans-serif;
   text-decoration: none;
@@ -272,11 +273,11 @@ input[type="password"] {
 
 .custom-modal button {
   width: 50%;
-  background-color: #543ad7;
+  background-color: var(--primary-bg-color);
   color: white;
   border: none;
   padding: 14px 0;
-  border-radius: 999px;
+  border-radius: 50px;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;

@@ -177,6 +177,7 @@ nav,
   color: white;
   cursor: pointer;
   font-size: 14px;
+  border: none;
 }
 
 .login:hover {
@@ -253,7 +254,7 @@ input[type="password"] {
   width: 100%;
   padding: 14px 20px;
   border: none;
-  border-radius: 999px;
+  border-radius: 50px;
   background-color: #fff;
   font-size: 14px;
   outline: none;
@@ -280,7 +281,7 @@ input[type="password"] {
   color: white;
   border: none;
   padding: 14px 0;
-  border-radius: 999px;
+  border-radius: 50px;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;

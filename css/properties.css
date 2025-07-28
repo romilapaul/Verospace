@@ -215,7 +215,7 @@ input[type="password"] {
   width: 100%;
   padding: 14px 20px;
   border: none;
-  border-radius: 999px;
+  border-radius: 50px;
   background-color: #fff;
   font-size: 14px;
   outline: none;
@@ -230,25 +230,31 @@ input[type="password"] {
 }
 
 .forgot-password a {
-  color: #543ad7;
+  color: var(--primary-bg-color);
   font-size: 14px;
   font-family: Lato, sans-serif;
   text-decoration: none;
   margin-top: 10px;
 }
 
-.login-container button {
+.custom-modal button {
   width: 50%;
-  background-color: #543ad7;
+  background-color: var(--primary-bg-color);
   color: white;
   border: none;
   padding: 14px 0;
-  border-radius: 999px;
+  border-radius: 50px;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
   transition: background-color 0.3s;
   margin: 0 auto;
+}
+
+.custom-modal button:hover {
+  background-color: var(--secondary-bg-color);
+  color: black;
+  transform: scale(1.09);
 }
 
 .create-account {
@@ -1218,7 +1224,7 @@ footer > div > div {
     margin-bottom: 250px;
   }
 
-  .search-btn{
+  .search-btn {
     font-size: 12px;
   }
 
