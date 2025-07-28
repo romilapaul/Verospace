@@ -986,7 +986,7 @@ input[type="range"]::-moz-range-thumb {
 /* Other Services Section */
 
 .other-services-section {
-  margin-block:75px;
+  margin-block: 75px;
 }
 
 .other-services-section > div > div {
@@ -1082,6 +1082,10 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* team section */
+.teams-section {
+  padding: 0 15px;
+}
+
 .teams-section > div {
   background-color: #f7f8fa;
   border-radius: 40px;
@@ -1622,6 +1626,10 @@ footer > div > div {
     max-width: 235px;
   }
 
+  .commitment-section .subtitle {
+    max-width: 250px;
+  }
+
   .subtitle {
     margin: 12px auto 34px !important;
     text-align: start;
@@ -1651,7 +1659,7 @@ footer > div > div {
 
   .teams-section .subtitle {
     margin: 12px auto 34px !important;
-    text-align: start;
+    text-align: center;
     font-size: 18px;
   }
 
@@ -1724,6 +1732,11 @@ footer > div > div {
 
   .col-7 {
     width: 50%;
+  }
+
+  .team-card1,
+  .team-card3 {
+    margin-bottom: 25px;
   }
 
   /* newsletter section */
@@ -2533,6 +2546,10 @@ footer > div > div {
 
   /* team section */
 
+  .teams-section {
+    margin-bottom: 50px;
+  }
+
   .teams-section .subheading {
     margin-bottom: 0;
   }
@@ -2625,6 +2642,31 @@ footer > div > div {
 @media screen and (max-width: 375px) {
   .sm-screen-banner-div {
     padding: 28px 0px;
+  }
+
+  /* teams section */
+
+  .team-card{
+    position: relative;
+  }
+
+  .details {
+    padding: 6px 5px;
+    min-width: 180px;
+    border-radius: 25px;
+    justify-content: center;
+    gap: 12px;
+    position: absolute;
+    bottom: 65px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .designation {
+    font-size: 12px;
+    color: white;
   }
 
   .testimonial-card {
