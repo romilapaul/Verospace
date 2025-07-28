@@ -593,6 +593,10 @@ footer > div > div {
   max-width: 140px;
 }
 
+.footer-logo > a {
+  max-width: 140px;
+}
+
 .footer-logo > img {
   width: 100%;
   object-fit: contain;
@@ -605,9 +609,37 @@ footer > div > div {
   gap: 23px;
 }
 
-.social-media-icon > img {
-  max-width: 40px;
+.social-media-icon1,
+.social-media-icon2,
+.social-media-icon3,
+.social-media-icon4 {
+  width: 40px;
+  background-color: var(--primary-bg-color);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.social-media-icon1 > a > img {
+  max-width: 10px;
   object-fit: contain;
+}
+
+.social-media-icon2 > a > img {
+  max-width: 22px;
+  object-fit: contain;
+}
+
+.social-media-icon3 > a > img,
+.social-media-icon4 > a > img {
+  max-width: 22px;
+  object-fit: contain;
+}
+
+.social-media-icon a:hover {
+  transform: scale(1.05);
 }
 
 .footer-divider {
@@ -644,9 +676,13 @@ footer > div > div {
   gap: 8px;
 }
 
-.property-images > img {
+.property-images a img {
   max-width: 95px;
   object-fit: contain;
+}
+
+.property-images a img:hover {
+  transform: scale(1.05);
 }
 
 /* copyright  section */
@@ -665,6 +701,11 @@ footer > div > div {
   font-weight: 600;
 }
 
+.copyright-content:hover {
+  color: black;
+  font-weight: bold;
+}
+
 .terms {
   display: flex;
   justify-content: center;
@@ -672,9 +713,14 @@ footer > div > div {
   gap: 27px;
 }
 
-.terms > p {
+.terms > a {
   font-weight: 600;
   color: #666666;
+}
+
+.terms > a:hover {
+  color: black;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {
@@ -987,7 +1033,7 @@ footer > div > div {
 
   /* Hero section */
   .hero-section {
-    margin-bottom: 50px;
+    padding: 10px 1.875vw 50px;
   }
 
   .hero-content > h1 {
@@ -1053,6 +1099,10 @@ footer > div > div {
   .form-container {
     padding: 25px 20px;
     border-radius: 8px;
+  }
+
+  .form-row2 {
+    flex-direction: column;
   }
 
   /* accordian section */
