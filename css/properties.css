@@ -544,7 +544,7 @@ input[type="checkbox"] {
 }
 
 .apply-btn {
-  background-color: #543ad7;
+  background-color: var(--primary-bg-color);
   color: white;
   padding: 12px 106px;
   text-transform: uppercase;
@@ -553,10 +553,16 @@ input[type="checkbox"] {
   border: none;
 }
 
+.apply-btn:hover {
+  background-color: var(--secondary-bg-color);
+  color: black;
+  transform: scale(1.09);
+}
+
 .range-fill1 {
   position: absolute;
   height: 6px;
-  background-color: #5a39e4;
+  background-color: var(--primary-bg-color);
   border-radius: 4px;
   top: 0px;
   z-index: 999;
@@ -603,7 +609,7 @@ input[type="checkbox"] {
   cursor: pointer;
   margin-top: -4px;
   box-shadow: none;
-  background-color: #5a2ce0;
+  background-color: var(--primary-bg-color);
 }
 
 .slider1 input[type="range"]::-webkit-slider-runnable-track {
@@ -619,7 +625,7 @@ input[type="checkbox"] {
 }
 
 .bubble1 {
-  background-color: #5a39e4;
+  background-color: var(--primary-bg-color);
   color: white;
   padding: 4px 12px;
   border-radius: 16px;
@@ -631,7 +637,7 @@ input[type="checkbox"] {
 }
 
 .bubble2 {
-  background-color: #5a39e4;
+  background-color: var(--primary-bg-color);
   color: white;
   padding: 4px 12px;
   border-radius: 16px;
@@ -765,6 +771,12 @@ input[type="checkbox"] {
   text-transform: uppercase;
 }
 
+.details-btn:hover {
+  background-color: var(--secondary-bg-color);
+  color: black;
+  transform: scale(1.09);
+}
+
 .details-btn > span {
   font-size: 18px;
 }
@@ -884,12 +896,36 @@ footer > div > div {
   gap: 23px;
 }
 
-.social-media-icon > a > img {
-  max-width: 40px;
+.social-media-icon1,
+.social-media-icon2,
+.social-media-icon3,
+.social-media-icon4 {
+  width: 40px;
+  background-color: var(--primary-bg-color);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.social-media-icon1 > a > img {
+  max-width: 10px;
   object-fit: contain;
 }
 
-.social-media-icon > a > img:hover {
+.social-media-icon2 > a > img {
+  max-width: 22px;
+  object-fit: contain;
+}
+
+.social-media-icon3 > a > img,
+.social-media-icon4 > a > img {
+  max-width: 22px;
+  object-fit: contain;
+}
+
+.social-media-icon a:hover {
   transform: scale(1.05);
 }
 
