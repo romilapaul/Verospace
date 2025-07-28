@@ -22,6 +22,8 @@ body {
   --primary-text-color: #333333;
   --secondary-text-color: #666666;
   --primary-heading-color: #3d3d3d;
+  --duration: 30s;
+  --totalItems: 5;
 }
 
 .container {
@@ -565,7 +567,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .col-5 {
-  width: 205.5px;
+  max-width: 205.5px;
 }
 
 .apartment-types-card {
@@ -756,7 +758,7 @@ input[type="range"]::-moz-range-thumb {
   padding: 50px 15px;
 }
 
-.properties-wrppr {
+.properties-wrapper {
   background-color: #f7f8fa;
   border-radius: 14px;
   padding-block: 50px;
@@ -984,7 +986,7 @@ input[type="range"]::-moz-range-thumb {
 /* Other Services Section */
 
 .other-services-section {
-  margin-block: 110px 75px;
+  margin-block:75px;
 }
 
 .other-services-section > div > div {
@@ -1167,18 +1169,13 @@ input[type="range"]::-moz-range-thumb {
   padding: 50px 15px;
 }
 
-.testimonials-wrppr {
-  border-radius: 14px;
-  padding-block: 50px;
-}
-
 .testimonial-section .subtitle {
   max-width: 218px;
   padding-bottom: 34px;
   margin: 0 auto;
 }
 
-.testimonials-wrppr {
+.testimonials-wrapper {
   max-width: 1540px;
   min-height: fit-content;
   display: flex;
@@ -1356,7 +1353,7 @@ input[type="range"]::-moz-range-thumb {
 
 /* trusted companies section */
 .trusted-companies-section {
-  margin-block: 75px;
+  margin-block: 50px 100px;
 }
 
 .trusted-companies-section > div > div {
@@ -1372,36 +1369,41 @@ input[type="range"]::-moz-range-thumb {
   margin-bottom: 40px;
 }
 
-.logo-slider {
-  overflow: hidden;
-  width: 100%;
-}
-
-.logo-track {
+.scroll-wrapper {
+  position: relative;
   display: flex;
-  align-items: center;
-  width: fit-content;
-  animation: scrollLeft 20s linear infinite;
+  overflow: hidden;
+  height: 110px;
 }
 
-.trusted-company-logo {
-  flex: 0 0 auto;
+.scroll-wrapper > .trusted-company-logo {
   max-width: 252px;
-  margin: 0 50px;
+  width: 25%;
+  position: absolute;
+  height: inherit;
+  left: 100%;
+  animation: scrollX var(--duration) linear infinite;
+  animation-delay: calc(
+    var(--duration) / var(--totalItems) * ((var(--totalItems) - var(--i)) * -1)
+  );
 }
 
-.trusted-company-logo img {
+.scroll-wrapper:hover > .trusted-company-logo {
+  animation-play-state: paused;
+}
+
+@keyframes scrollX {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -25%;
+  }
+}
+.trusted-company-logo > img {
   width: 100%;
+  height: 100%;
   object-fit: contain;
-}
-
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
 }
 
 /* newsletter section */
@@ -1491,12 +1493,36 @@ footer > div > div {
   gap: 23px;
 }
 
-.social-media-icon > a > img {
-  max-width: 40px;
+.social-media-icon1,
+.social-media-icon2,
+.social-media-icon3,
+.social-media-icon4 {
+  width: 40px;
+  background-color: var(--primary-bg-color);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.social-media-icon1 > a > img {
+  max-width: 10px;
   object-fit: contain;
 }
 
-.social-media-icon > a > img:hover {
+.social-media-icon2 > a > img {
+  max-width: 22px;
+  object-fit: contain;
+}
+
+.social-media-icon3 > a > img,
+.social-media-icon4 > a > img {
+  max-width: 22px;
+  object-fit: contain;
+}
+
+.social-media-icon a:hover {
   transform: scale(1.05);
 }
 
@@ -1664,6 +1690,12 @@ footer > div > div {
     width: 100%;
   }
 
+  .col-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .col-3 {
     margin-top: 80px;
   }
@@ -1753,6 +1785,12 @@ footer > div > div {
 
   .letter {
     font-size: 41px;
+  }
+
+  /* trusted companies section */
+
+  .trusted-company-logo > img {
+    width: 80%;
   }
 
   /* newsletter section */
@@ -2355,6 +2393,10 @@ footer > div > div {
     font-size: 16px;
   }
 
+  .trusted-companies-section {
+    margin-block: 50px;
+  }
+
   /* newsletter section */
 
   .submit-btn {
@@ -2525,8 +2567,8 @@ footer > div > div {
     margin: 0 12px;
   }
 
-  .trusted-company-logo img {
-    width: 65%;
+  .trusted-companies-section {
+    margin-block: 0px 25px;
   }
 
   /* newsletter section */
